@@ -3,16 +3,18 @@
 Вот он:
 
 Merge pull request #32004 from hashicorp/brandonc/nested_attr_sensitive
-    
+
 fix: don't reveal nested attributes with sensitive schema
+```git show b8d720```
+
 
 2. Какому тегу соответствует коммит 85024d3?
-
-v0.12.23
+```git show 85024d3```
 
 3. Сколько родителей у коммита b8d720? Напишите их хеши.
 
 2 родителя - 56cd7859e0 и 9ea88f22fc
+```git show b8d720```
 
 4. Перечислите хеши и комментарии всех коммитов которые были сделаны между тегами v0.12.23 и v0.12.24.
 
@@ -27,12 +29,15 @@ d5f9411f5108260320064349b757f55c09bc4b80 command: Fix bug when using terraform l
 dd01a35078f040ca984cdd349f18d0b67e486c35 Update CHANGELOG.md
 225466bc3e5f35baa5d07197bbc079345b77525e Cleanup after v0.12.23 release
 85024d3100126de36331c6982bfaac02cdab9e76 (tag: v0.12.23) v0.12.23
+```git log --pretty=oneline v0.12.23 v0.12.24```
 
 5. Найдите коммит в котором была создана функция func providerSource, ее определение в коде выглядит 
 так func providerSource(...) (вместо троеточия перечислены аргументы).
 
 c5bd783ebaecd3f895c72c079b67e7d61b493182 - создали
 5af1e6234ab6da412fb8637393c5a17a1b293663 - наполнили
+
+Через пайчарм очень здорово смотреть историю - там и посмотрел)
 
 6. Найдите все коммиты в которых была изменена функция globalPluginDirs.
 
@@ -43,6 +48,10 @@ commit 41ab0aef7a0fe030e84018973a64135b11abcd70
 commit 66ebff90cdfaa6938f26f908c7ebad8d547fea17
 commit 8364383c359a6b738a436d1b7745ccdce178df47
 
+```git log --follow -- plugins.go```
+
 7. Кто автор функции synchronizedWriters?
 
 Martin Atkins
+
+```git log -G"synchronizedWriters" --oneline```
