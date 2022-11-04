@@ -52,7 +52,7 @@
 - commit 8364383c359a6b738a436d1b7745ccdce178df47
 
 
-```git log --follow -- plugins.go```
+```git log -L :providerSource:provider_source.go```
 
 7. Кто автор функции synchronizedWriters?
 
